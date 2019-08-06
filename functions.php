@@ -9,9 +9,7 @@ add_action('wp_enqueue_scripts', 'add_stylesheet');
 
 //JS
 function add_script(){ //登録したJSを以下の順番で読み込む
-    wp_register_script('main-first', get_template_directory_uri().'/js/main-first.js', array(), '1.0', true);
-    wp_register_script('main-second', get_template_directory_uri().'/js/main-second.js', array(), '1.0', true);
-	wp_enqueue_script('main-last', get_template_directory_uri().'/js/main-last.js', array('main-first', 'main-second'), '1.0', true);
+	wp_enqueue_script('main', get_template_directory_uri().'/js/main.js', array(), false, true);
 }
 add_action('wp_enqueue_scripts','add_script');
 
